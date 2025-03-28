@@ -8,7 +8,7 @@ class CustomersController < ApplicationController
       @customers = Customer.order(:FullName)
     end
 
-    def missingEmail
-      @customers = Customer.where(EmailAddress: nil)
+    def missing_email
+      @customers = Customer.where(EmailAddress: [nil, ''])
     end
 end
