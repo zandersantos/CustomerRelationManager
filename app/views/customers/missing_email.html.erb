@@ -1,5 +1,9 @@
 <h3 class="title is-4">Customers Missing Email Addresses</h3>
 
+<div>
+  <%= link_to 'All Customers', root_path %> |
+  <%= link_to 'Customers Alphabetized', alphabetized_customers_path %>
+</div>
 
 <% @customers.each do |customer| %>
   <%= render partial: "customer", locals: { customer: customer } %>

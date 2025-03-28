@@ -1,5 +1,10 @@
 <h3 class="title is-4">All Customers</h3>
 
+<div>
+  <%= link_to 'Customers Missing Email', missing_email_customers_path %> |
+  <%= link_to 'Customers Alphabetized', alphabetized_customers_path %>
+</div>
+
 <% @customers.each do |customer| %>
   <%= render partial: "customer", locals: { customer: customer } %>
 <% end %>
